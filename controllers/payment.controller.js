@@ -20,7 +20,12 @@
     activate();
 
     function activate(){
-      // do smth
+      if ($rootScope.user && $rootScope.user.email){
+        // do smth
+      } else {
+        alert("Please input your email first!");
+        $state.go('email');
+      }
     }
   }
 })(angular);

@@ -32,6 +32,7 @@
    */
   function runApp($http, $rootScope, $anchorScroll, $location, $window, $state, Authentication) {
     // run the app...
+    $rootScope.user = {}
   }
 
   /*

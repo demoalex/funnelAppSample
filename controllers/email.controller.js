@@ -14,13 +14,18 @@
   /**
    * @namespace AppController
    */
-  function EmailController($state, $stateParams, $analytics) {
+  function EmailController($rootScope, $state, $stateParams, $analytics) {
     var vm = this;
 
     activate();
 
     function activate(){
-      // do smth
+      if ($rootScope.user && $rootScope.user.name){
+        // do smth
+      } else {
+        alert("Please input your name first!");
+        $state.go('name');
+      }
     }
   }
 })(angular);

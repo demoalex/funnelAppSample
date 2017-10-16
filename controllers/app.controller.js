@@ -20,7 +20,12 @@
     activate();
 
     function activate(){
-      // do smth
+      if ($rootScope.user && $rootScope.user.paymentSucceed){
+        // do smth
+      } else {
+        alert("Please make a purchase to access the app");
+        $state.go('payment');
+      }
     }
   }
 })(angular);
